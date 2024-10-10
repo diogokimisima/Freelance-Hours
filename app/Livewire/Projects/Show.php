@@ -9,11 +9,6 @@ class Show extends Component
 {
     public Project $project;
 
-    public function mount($p)
-    {
-        $this->project = Project::findOrFail($p);
-    }
-
     public function render()
     {
         return view('livewire.projects.show');
