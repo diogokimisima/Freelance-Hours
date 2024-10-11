@@ -3,7 +3,7 @@
     <div class="flex items-start justify-between pb-4">
         <div class="flex flex-col gap-[16px]">
             <div>
-                <x-projects.status :status="$project->status"/>
+                <x-projects.status :status="$project->status" />
             </div>
             <h1 class="text-[28px] text-white leading-9">
                 {{ $project->title }}
@@ -28,9 +28,7 @@
         <div class="uppercase font-bold text-[#8C8C9A] text-[12px]">Tecnologias</div>
         <div class="flex gap-[8px] items-center pb-2">
             @foreach ($project->tech_stack as $tech)
-                {{ $tech }}
-
-                {{-- <x-ui.tech :icon="$tech->icon" :text="$tech->text"/> --}}
+                <x-ui.tech :icon="$tech" :text="$tech" />
             @endforeach
         </div>
     </div>
