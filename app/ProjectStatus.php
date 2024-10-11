@@ -10,8 +10,8 @@ enum ProjectStatus: string
     public function label(): string
     {
         return match ($this) {
-            self::Open => 'Open',
-            self::Closed => 'Closed',
+            self::Open => 'Aberto',
+            self::Closed => 'Encerrado',
         };
     }
 }
